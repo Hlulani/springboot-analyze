@@ -14,8 +14,9 @@ public class AnalyzeController {
     @Autowired
     private TextAnalyzer analyzer;
 
+//    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping(value = "/analyze", consumes = "application/json", produces = "application/json")
-    public TextAnalyzeResponse helloworld(@RequestBody TextAnalyzeRequest request) {
+    public TextAnalyzeResponse getTextToAnalyze(@RequestBody TextAnalyzeRequest request) {
         System.out.println(request.getText());
         System.out.println(request.getAnalyzeType());
 
